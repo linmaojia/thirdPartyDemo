@@ -15,7 +15,9 @@
 #import "DEMO5_VC.h"
 #import "DEMO6_VC.h"
 #import "DEMO7_VC.h"
-#import "DEMO8_VC.h"
+
+#import "DEMO9_VC.h"
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
 }
@@ -41,7 +43,7 @@
 - (NSArray *)nameArray {
     if (!_nameArray) {
         _nameArray = @[@"SVProgressHUD-1",@"SIAlertView-2",@"TSMessages-3",@"HMSegmentedControl-4",@"HYBLoopScrollView-5"
-                       ,@"IQKeyboardManager-6",@"JDStatusBarNotification-7",@"MWPhotoBrowser-8",@"JVFloatLabeledTextField"];
+                       ,@"IQKeyboardManager-6",@"JDStatusBarNotification-7",@"SDWebImage-9"];
        
     }
     return _nameArray;
@@ -49,7 +51,7 @@
 - (NSArray *)classArray {
     if (!_classArray) {
         _classArray = @[[DEMO1_VC class],[DEMO2_VC class],[DEMO3_VC class],[DEMO4_VC class],[DEMO5_VC class]
-                        ,[DEMO6_VC class],[DEMO7_VC class],[DEMO8_VC class]];
+                        ,[DEMO6_VC class],[DEMO7_VC class],[DEMO9_VC class]];
         
     }
     return _classArray;
@@ -109,11 +111,22 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    RootViewController *vc = [[self.classArray[indexPath.row] alloc] init];
+
     
-    vc.titleStr = self.nameArray[indexPath.row];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    if(indexPath.row == 7)
+    {
+     
+        [self.navigationController pushViewController:[DEMO9_VC new] animated:YES];
+    }
+    else
+    {
+        RootViewController *vc = [[self.classArray[indexPath.row] alloc] init];
+        
+        vc.titleStr = self.nameArray[indexPath.row];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - 控件布局

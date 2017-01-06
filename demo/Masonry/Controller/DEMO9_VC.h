@@ -6,8 +6,8 @@
 //  Copyright © 2016年 AVGD. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface DEMO9_VC : RootViewController
+@interface DEMO9_VC : UIViewController
 
 @end

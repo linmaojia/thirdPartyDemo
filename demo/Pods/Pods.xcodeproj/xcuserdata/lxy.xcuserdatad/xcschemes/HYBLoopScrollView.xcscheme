@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '976008FA7069DC06DD9B3376'
+               BlueprintIdentifier = '9E084E0A3EB2F5E19A511F5E'
                BlueprintName = 'HYBLoopScrollView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libHYBLoopScrollView.a'>
